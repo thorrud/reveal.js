@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -64,8 +64,10 @@
 					<section>
 						<p>
 							Cross-Site Scripting (XSS) attacks occur when:
-							<li>Data enters a Web application through an untrusted source, most frequently a web request.</li>
-							<li>The data is included in dynamic content that is sent to a web user without being validated for malicious content.</li>
+							<ol>
+								<li>Data enters a Web application through an untrusted source, most frequently a web request.</li>
+								<li>The data is included in dynamic content that is sent to a web user without being validated for malicious content.</li>
+							</ol>
 						</p>
 					</section>
 				</section>
@@ -122,14 +124,75 @@
 				</section>
 
 				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
+					<h2>CSP</h2>
 				</section>
+
+				<section>
+					<section>
+						<h3>Source Whitelists</h3>
+						<p>
+							The core issue exploited by XSS attacks is the browser’s inability to distinguish between script that’s intended to be part of your application, and script that’s been maliciously injected by a third-party
+						</p>
+					</section>
+					<section>
+						<h4>Policy applies to a wide variety of resources</h4>
+						<p>
+							While script resources are the most obvious security risks, CSP provides a rich set of policy directives that enable fairly granular control over the resources that a page is allowed to load
+						</p>
+					</section>
+					<section>
+						<h4>Implementation Details</h4>
+						<p>
+							Policy is defined on a page-by-page basis: you’ll need to send the HTTP header along with every response that you’d like to ensure is protected
+						</p>
+					</section>
+					<section>
+						<h4>Sandboxing</h4>
+						<p>
+							There’s one more directive worth talking about: <b>sandbox</b>
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Inline Code Considered Harmful</h3>
+						<p>
+							Origin-based whitelisting doesn’t, however, solve the biggest threat posed by XSS attacks: inline script injection
+						</p>
+					</section>
+					<section>
+						For example, you might rewrite the following from:
+						<pre><code data-trim contenteditable>
+<script>
+  function doAmazingThings() {
+    alert('YOU ARE AMAZING!');
+  }
+</script>
+<button onclick='doAmazingThings();'>Am I amazing?</button>
+						</code></pre>
+
+						to something more like:
+
+						<pre><code data-trim contenteditable>
+							<!-- amazing.html -->
+<script src='amazing.js'></script>
+<button id='amazing'>Am I amazing?</button>
+						</code></pre>
+
+						<pre><code data-trim contenteditable>
+							// amazing.js
+function doAmazingThings() {
+  alert('YOU ARE AMAZING!');
+}
+document.addEventListener('DOMContentReady', function () {
+  document.getElementById('amazing')
+          .addEventListener('click', doAmazingThings);
+});
+						</code></pre>						
+					</section>
+				</section>
+
 
 				<section>
 					<h2>Fantastic Ordered List</h2>
