@@ -1,0 +1,55 @@
+1. Introduksjon
+	Navn, hei, osv. 
+	- Slide med foredragsnavn
+
+2. Hva skal vi snakke om / kort fortalt
+	- Problemet - XSS
+	- Intro til CSP (the solution to our problems)
+	- Demo
+	- CSP contd.
+	
+3. XSS (Cross Site Scripting) - Hva er det
+	- Owasp top 10
+	- Server vs Client side
+	- Stored vs Reflected
+	- Fyll inn med kodesnutter where apropriate
+	- Figurer
+	- 
+4. Demo med kodesnutter XSS (Utfører et XSS angrep - relativt kort)
+
+5. How to determine if web-server is attacked
+	- Vanskelig å oppdage
+	- Hadde vært fint med et rammeverk som sa ifra om at man var infisert
+	
+6. CSP to the rescue
+	- Problemstilling - browser inability
+	- Figur /kodesnutt (noting unusual here)
+	- Løsningen - whitelists
+		* hvilke ressurser kan lastes /fra hvilke domener
+	- Kodesnutt med eksempel på whitelist
+	
+7. Demo - CSP
+	- definere whitelist, se at tidligere XSS angrep ikke fungerer.
+	- hva skjedde nå? / figur
+	- hvordan agere på et xss angrep
+
+8. Angrepslogg - vise i loggen at web-server er injisert med et XSS. 
+	- Gjør det mulig å fjerne et xss tidlig, lettere å spore.
+ 
+9. Mer CSP - dypere inn i materien
+	- Utvidet info om whiteliste muligheter
+
+10. demo?? 
+
+
+	
+11.	Browserstøtte W3C - anbefaling/standard
+
+12. Videre lesing
+ - Owasp
+ - w3c standarden
+ - html5 rocks
+ 
+13. Siste slide - om oss, spørsmål
+
+MN: Fargevalg bakgrunn pr seksjon
