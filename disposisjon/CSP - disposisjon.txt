@@ -4,33 +4,46 @@
 
 2. Hva skal vi snakke om / kort fortalt
 	- Problemet - XSS
+	- Demo XSS
 	- Intro til CSP (the solution to our problems)
-	- Demo
+	- Demo CSP
 	- CSP contd.
 	
 3. XSS (Cross Site Scripting) - Hva er det
 	- Owasp top 10
-	- Server vs Client side
-	- Stored vs Reflected
-	- Fyll inn med kodesnutter where apropriate
-	- Figurer
+	- Serverside/Client side - Stored and Reflected
+		* Serverside - Stored XSS
+		* Clientside - Stored XSS
+		* Serverside - Reflected XSS
+		* Clientside - Reflected XSS
+	- Fyll inn med kodesnutter where apropriate / Gjennomgående figur Server - Client
 	- 
-4. Demo med kodesnutter XSS (Utfører et XSS angrep - relativt kort)
+4. Demo med kodesnutter XSS (Utfører et XSS angrep)
+	- Show figure of serverside stored xss again
+	- Serverside - Stored XSS
+		* Show webpage (create profile w/choice of profile picture (taken from img folder)
+		* Create ordinary profile with picture, name and small text about self
+		* Create profile with xss - alert box injected
+		* Create profile with <script> tag injected
+		* Click on "show profile of - <person name>, show ordinary, alertbox and script injected profile
 
-5. How to determine if web-server is attacked
-	- Vanskelig å oppdage
-	- Hadde vært fint med et rammeverk som sa ifra om at man var infisert
+5. How to determine if web-server is attacked - how to defend against XSS
+	- Vanskelig å oppdage - ikke alle xss angrep er like åpenbare som i demo (punkt 4.) (spesielt reflected, som ikke lagres noe sted)
+	- input validation/escape characters (punkt 1.-3. på owasp siden om XSS), 
+	- punkt 4. CSP, som vi skal benytte. Bør ikke sees på som en erstatning til punkt 1-3 på owasp siden, men som enda en måte å beskytte seg. 
 	
 6. CSP to the rescue
-	- Problemstilling - browser inability
-	- Figur /kodesnutt (noting unusual here)
-	- Løsningen - whitelists
+	- CSP - hva er det, hva gjør det, og hvordan løser det mine problemer?
+	- CSP direktiv - definere hvor web-serveren skal laste ressurser fra. 
+		*kodeboks med eksempel på direktiv (script-src, default-src osv.)
+	- CSP sendes med headeren ut til klienten
+	- Løsningen - whitelists	
 		* hvilke ressurser kan lastes /fra hvilke domener
-	- Kodesnutt med eksempel på whitelist
+	- Kodesnutt med eksempel på whitelist, 
 	
 7. Demo - CSP
 	- definere whitelist, se at tidligere XSS angrep ikke fungerer.
-	- hva skjedde nå? / figur
+	- hva skjedde nå? / figur (gjennomgående figur, som i tillegg viser mappestrukturen hos web-serveren (img, js, txt mapper) hvor csp-direktivet er satt opp til å laste ressurser fra
 	- hvordan agere på et xss angrep
 
 8. Angrepslogg - vise i loggen at web-server er injisert med et XSS. 
@@ -38,18 +51,15 @@
  
 9. Mer CSP - dypere inn i materien
 	- Utvidet info om whiteliste muligheter
-
-10. demo?? 
-
-
 	
-11.	Browserstøtte W3C - anbefaling/standard
+10.	Browserstøtte W3C - anbefaling/standard
 
-12. Videre lesing
- - Owasp
+11. Videre lesing
+ - Owasp.org
  - w3c standarden
  - html5 rocks
+ - mozilla developers network side om CSP
  
-13. Siste slide - om oss, spørsmål
+12. Siste slide - om oss, spørsmål
 
 MN: Fargevalg bakgrunn pr seksjon
