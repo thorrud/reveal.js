@@ -98,15 +98,41 @@
 						<h2>CSP to the rescue</h2>
 					</section>
 					<section>
-						<h2>The issue</h2>
-						<p>The core issue exploited by XSS attacks is the browser’s inability to distinguish between script that’s intended to be part of your application, and script that’s been maliciously injected by a third-party</p>
+						<h2>What is it?</h2>
+						
+							<p>An added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks.</p>
+							
+						
+					</section>
+					<section>
+						<h2>What does it do</h2>
+						
+							<p>Declare a set of content restrictions for a web resource</p>
+							
+					</section>
+					<section>
+						<h2>How does it solve my problems?</h2>
+						
+							<p>With this policy defined, the browser will simply throw an error instead of loading script from any other source</p>
+						
+					</section>
+					<section>
+						<h2>CSP policy directives</h2>
+						
+							<p>Defines where the web server should load resources from</p>
+							<pre><code data-trim contenteditable>
+Content-Security-Policy: default-src 'self' trustedscripts.foo.com; 				</code></pre>
+						
+					</section>
+					<section>
+					
+						<p>CSP is sent with the header to the client</p>
+						
 					</section>
 					<section>
 						<h2>The solution - Whitelists</h2>
 						<p> CSP defines the Content-Security-Policy HTTP header that allows you to create a whitelist of sources of trusted content, and instructs the browser to only execute or render resources from those sources</p>
-						<pre><code data-trim contenteditable>
-Content-Security-Policy: script-src 'self' https://apis.google.com
-						</code></pre>
+						
 					</section>
 				</section>
 
