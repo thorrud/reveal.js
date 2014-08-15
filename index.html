@@ -131,7 +131,7 @@ Content-Security-Policy: default-src 'self' trustedscripts.foo.com; 				</code><
 					</section>
 					<section>
 						<h2>The solution - Whitelists</h2>
-						<p> CSP defines the Content-Security-Policy HTTP header that allows you to create a whitelist of sources of trusted content, and instructs the browser to only execute or render resources from those sources</p>
+						<p> What resources can be loaded from which domains</p>
 						
 					</section>
 				</section>
@@ -146,30 +146,40 @@ Content-Security-Policy: default-src 'self' trustedscripts.foo.com; 				</code><
 
 				<section>
 					<section>
-						<h3>More CSP</h3>
+						<h3>More CSP - deeper into the matter</h3>
+					</section>
+					
+					<section>
+						<h4>Wide variety of sources</h4>
+						<ul>
+							<li><b>connect-src</b> limits the origins to which you can connect (via XHR, WebSockets, and EventSource).</li>
+							<li><b>font-src</b> specifies the origins that can serve web fonts. Google’s Web Fonts could be enabled via font-src https://themes.googleusercontent.com</li>
+							<li><b>frame-src</b> lists the origins that can be embedded as frames. For example: frame-src https://youtube.com would enable embedding YouTube videos, but no other origins.</li>
+							<li><b>img-src</b> defines the origins from which images can be loaded.</li>
+							<li><b>media-src</b> restricts the origins allowed to deliver video and audio.</li>
+							<li><b>object-src</b> allows control over Flash and other plugins.</li>
+							<li><b>style-src</b> is script-src’s counterpart for stylesheets.</li>
+						</ul>
 					</section>
 					<section>
-						<h4>Policy applies to a wide variety of resources</h4>
+						<p>Four keywords are also accepted in the source list:</p>
+						<ul>
+							<li><b>'none'</b> as you might expect, matches nothing.</li>
+							<li><b>'self'</b> matches the current origin, but not its subdomains.</li>
+							<li><b>'unsafe-inline'</b> allows inline JavaScript and CSS.</li>
+							<li><b>'unsafe-eval'</b> allows text-to-JavaScript mechanisms like eval.</li>
+						</ul>
+					</section>
+					<section>
+						
 						<p>
-							While script resources are the most obvious security risks, CSP provides a rich set of policy directives that enable fairly granular control over the resources that a page is allowed to load
+							<b>sandbox</b> is a directive that´s a bit different than the others we’ve looked at, as it places restrictions on actions the page can take, rather than on resources that the page can load.
 						</p>
 					</section>
 					<section>
-						<h4>Implementation Details</h4>
+					
 						<p>
-							Policy is defined on a page-by-page basis: you’ll need to send the HTTP header along with every response that you’d like to ensure is protected
-						</p>
-					</section>
-					<section>
-						<h4>Sandboxing</h4>
-						<p>
-							There’s one more directive worth talking about: <b>sandbox</b>
-						</p>
-					</section>
-					<section>
-						<h3>Inline Code Considered Harmful</h3>
-						<p>
-							Origin-based whitelisting doesn’t, however, solve the biggest threat posed by XSS attacks: inline script injection
+							CSP bans inline scripting, eval(), new Function(), setTimeout([string], ...), and setInterval([string], ...)
 						</p>
 					</section>
 					<section>
@@ -204,16 +214,13 @@ document.addEventListener('DOMContentReady', function () {
 					</section>
 				</section>
 
-
-				<section>
-					<h2>Demo??</h2>
-				</section>
-
 				<section>
 					<h2>Status</h2>
 					<ul>
 					<li>CSP was originally developed by the Mozilla Foundation and was first implemented in Firefox 4</li>
-					<li>As of 2012 the CSP is a W3C candidate</li>
+					<li>As of 2012 the CSP 1.0 is a W3C candidate</li>
+					<li>Content Security Policy 1.1’s Editors’ Draft is under active development.</li>
+					<li>CSP is quite usable in Chrome 16+, Safari 6+, and Firefox 4+, and has (very) limited support in IE 10.</li>
 					</ul>
 				</section>
 
