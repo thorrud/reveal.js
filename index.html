@@ -88,9 +88,28 @@
 				<section>
 					<h2>How to determine if a web server is attacked</h2>
 					<p>
-						Difficult to detect 
+						Can be difficult to detect 
 					</p>
 					<p>Would be nice with a framework that told you if you were infected</p>
+				</section>
+
+				<section id="fragments">
+					<h2>How Do I Prevent XSS?</h2>
+					<p>
+						<ol>
+							<li class="fragment">Escape all untrusted data based on the HTML context that the data will be placed into.</li>
+							<li class="fragment">Input validation</li>
+							<li class="fragment">For rich content, consider auto-sanitization libraries like OWASP’s AntiSamy or the Java HTML Sanitizer Project</li>
+							<li class="fragment">Consider Content Security Policy (CSP) to defend against XSS across your entire site.</li>
+						</ol>
+					</p>
+
+					<p class="fragment">
+						<small>
+							* https://www.owasp.org/index.php/Top_10_2013-A3-Cross-Site_Scripting_(XSS)
+						</small>
+					</p>
+
 				</section>
 
 				<section>
@@ -98,26 +117,26 @@
 						<h2>CSP to the rescue</h2>
 					</section>
 					<section>
-						<h2>What is it?</h2>
+						<h4>What is it?</h4>
 						
 							<p>An added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks.</p>
 							
 						
 					</section>
 					<section>
-						<h2>What does it do</h2>
+						<h4>What does it do</h4>
 						
 							<p>Declare a set of content restrictions for a web resource</p>
 							
 					</section>
 					<section>
-						<h2>How does it solve my problems?</h2>
+						<h4>How does it solve my problems?</h4>
 						
 							<p>With this policy defined, the browser will simply throw an error instead of loading script from any other source</p>
 						
 					</section>
 					<section>
-						<h2>CSP policy directives</h2>
+						<h4>CSP policy directives</h4>
 						
 							<p>Defines where the web server should load resources from</p>
 							<pre><code data-trim contenteditable>
@@ -130,10 +149,11 @@ Content-Security-Policy: default-src 'self' trustedscripts.foo.com; 				</code><
 						
 					</section>
 					<section>
-						<h2>The solution - Whitelists</h2>
+						<h4>Whitelists</h4>
 						<p> What resources can be loaded from which domains</p>
 						
 					</section>
+
 				</section>
 
 				<section>
@@ -142,6 +162,17 @@ Content-Security-Policy: default-src 'self' trustedscripts.foo.com; 				</code><
 
 				<section>
 					<h2>Reporting</h2>
+					<small>
+					<code>csp-report: {document-uri:http://csp-demo.herokuapp.com/, referrer:, violated-directive:script-src 'self',...}<br/>
+					blocked-uri: ""<br/>
+column-number: 2536<br/>
+document-uri: "http://csp-demo.herokuapp.com/"<br/>
+line-number: 2<br/>
+original-policy: "default-src 'self'; script-src 'self'; img-src 'self' *.facebook.com *.akamaihd.net; style-src *; frame-src 'self'; report-uri /_/csp-reports;script-nonce <br/>7fcd2784d3c60010c90490e36440c58be3611bb5"<br/>
+referrer: ""<br/>
+source-file: "http://csp-demo.herokuapp.com/Assets/Scripts/jQuery/jquery-2.1.1.min.js"<br/>
+status-code: 200<br/>
+violated-directive: "script-src 'self'"</code></small>
 				</section>
 
 				<section>
@@ -211,6 +242,10 @@ document.addEventListener('DOMContentReady', function () {
           .addEventListener('click', doAmazingThings);
 });
 						</code></pre>						
+					</section>
+
+					<section>
+						
 					</section>
 				</section>
 
