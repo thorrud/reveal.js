@@ -55,8 +55,9 @@
 					<h2>Agenda</h2>
 					<ul>
 						<li>The problem - XSS</li>
+                        <li>XSS Demo</li>
 						<li>Introduction to CSP (the solution to our problem)</li>
-						<li>Demo</li>
+						<li>CSP Demo</li>
 						<li>More CSP</li>
 					</ul>
 				</section>
@@ -360,7 +361,11 @@ document.addEventListener('DOMContentReady', function () {
 					</section>
 
 					<section>
-						
+                        <h2>CSP - Reporting only</h2>
+                        Change HTTP response header:
+                        <pre><code>Content-Security-Policy: default-src 'self'</code></pre>
+                        To
+						<pre><code>Content-Security-Policy-Report-Only: default-src 'self'</code></pre>
 					</section>
 				</section>
 
