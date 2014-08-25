@@ -68,30 +68,30 @@ MN: Fargevalg bakgrunn pr seksjon
 
 Tilbakemeldinger fra java-fagmøte:
 
-Oppsett av CSP - hvordan konfigurere klart
-Mer reporting - Reporting only
-Pretty format på reporting kode
-M - Hvilke browsere er støttet - screenshot av nettside
-XSS-breadcrumb
-M - XSS-eksempler fra virkeligheten
-M - XSS - kostnader fra virkeligheten
+( ) Oppsett av CSP - hvordan konfigurere klart
+( ) Mer reporting - Reporting only
+( ) Pretty format på reporting kode
+(V) M - Hvilke browsere er støttet - screenshot av nettside
+( ) XSS-breadcrumb
+(V) M - XSS-eksempler fra virkeligheten
+(V) M - XSS - kostnader fra virkeligheten
 
 
-Agenda - endre overskrifter
-Owasp - forklare hva owasp er
-Owasp logoen
-CSP - Content Security Policy - nevne / vise forkortelsen 
-Mer figurer
-Å - XSS - mindre tekst, 
-XSS - freshe opp figurer, mindre piler, mer pedagogisk
-XSS - ikke document.cookie
-Reflected/stored "speil/skuff" generell bildebruk - bilder som forteller noe
-Hvem bruker CSP - bankId 2.0.
-XSS - stored reflected client server forklare bedre
-figur XSS
-Prevent XSS - escaping,validering, osv. eksempler bilder
-CSP to the rescue - bort med brødtekst
-vise csp header
+( ) Agenda - endre overskrifter
+( ) Owasp - forklare hva owasp er
+( ) Owasp logoen
+( ) CSP - Content Security Policy - nevne / vise forkortelsen 
+( ) Mer figurer
+( ) Å - XSS - mindre tekst, 
+( ) XSS - freshe opp figurer, mindre piler, mer pedagogisk
+( ) XSS - ikke document.cookie
+( ) Reflected/stored "speil/skuff" generell bildebruk - bilder som forteller noe
+( ) Hvem bruker CSP - bankId 2.0.
+( ) XSS - stored reflected client server forklare bedre
+( ) figur XSS
+( ) Prevent XSS - escaping,validering, osv. eksempler bilder
+( )CSP to the rescue - bort med brødtekst
+( ) vise csp header
 
 Å - More csp før csp demo (omdøpe til noe annet enn more csp)
 Å - Hybrid - vise csp kode i presentasjon og i intellij
