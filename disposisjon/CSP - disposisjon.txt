@@ -68,7 +68,7 @@ MN: Fargevalg bakgrunn pr seksjon
 
 Tilbakemeldinger fra java-fagmøte:
 
-( ) Oppsett av CSP - hvordan konfigurere klart
+( ) M - Oppsett av CSP - hvordan konfigurere klart
 ( ) Mer reporting - Reporting only
 ( ) Pretty format på reporting kode
 (V) M - Hvilke browsere er støttet - screenshot av nettside
@@ -77,30 +77,34 @@ Tilbakemeldinger fra java-fagmøte:
 (V) M - XSS - kostnader fra virkeligheten
 
 
-( ) Agenda - endre overskrifter
-( ) Owasp - forklare hva owasp er
-( ) Owasp logoen
-( ) CSP - Content Security Policy - nevne / vise forkortelsen 
+( ) M - Agenda - endre overskrifter
+(V) Owasp - forklare hva owasp er
+(V) Owasp logoen
+(V) CSP - Content Security Policy - nevne / vise forkortelsen 
 ( ) Mer figurer
-( ) Å - XSS - mindre tekst, 
-( ) XSS - freshe opp figurer, mindre piler, mer pedagogisk
+(V) Å - XSS - mindre tekst, 
+( ) M - XSS - freshe opp figurer, mindre piler, mer pedagogisk. Fjerne noen slides
 ( ) XSS - ikke document.cookie
 ( ) Reflected/stored "speil/skuff" generell bildebruk - bilder som forteller noe
 ( ) Hvem bruker CSP - bankId 2.0.
 ( ) XSS - stored reflected client server forklare bedre
-( ) figur XSS
-( ) Prevent XSS - escaping,validering, osv. eksempler bilder
-( )CSP to the rescue - bort med brødtekst
-( ) vise csp header
+( ) figur XSS stored/reflected client/server matrise
+( ) Å - Prevent XSS - escaping,validering, osv. eksempler bilder
+( ) Å - CSP to the rescue - bort med brødtekst
+( ) Å - vise csp header
 
-Å - More csp før csp demo (omdøpe til noe annet enn more csp)
-Å - Hybrid - vise csp kode i presentasjon og i intellij
-Annet theme enn darcula
-fremheve csp kode i presentasjon
+(V) Å - More csp før csp demo (omdøpe til noe annet enn more csp)
+(V) Å - Hybrid - vise csp kode i presentasjon og i intellij
+( ) M - Annet theme enn darcula
+(V) fremheve csp kode i presentasjon
 
-Mer XSS på demo
+( ) Mer XSS på demo
 
-Statusslide - tidslinje
-Bilde med mindre hår
-About us - twitter, instagram, snapchat, QR-kode
+( ) Statusslide - tidslinje
+( ) Pros and Cons
+( ) M - "Det er et veldig godt eksempel" - something something CSP - figur med CSP protection (fra XSS slides)
+( ) M - Bilde med mindre hår
+( ) About us - twitter, instagram, snapchat, QR-kode
+( ) Finn en bakgrunn
+
 
