@@ -89,8 +89,8 @@ Tilbakemeldinger fra java-fagmøte:
 ( ) Hvem bruker CSP - bankId 2.0.
 ( ) XSS - stored reflected client server forklare bedre
 ( ) figur XSS stored/reflected client/server matrise
-( ) Å - Prevent XSS - escaping,validering, osv. eksempler bilder
-( ) Å - CSP to the rescue - bort med brødtekst
+(V) Å - Prevent XSS - escaping,validering, osv. eksempler bilder
+(V) Å - CSP to the rescue - bort med brødtekst
 ( ) Å - vise csp header
 
 (V) Å - More csp før csp demo (omdøpe til noe annet enn more csp)
