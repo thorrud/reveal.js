@@ -88,7 +88,7 @@ Tilbakemeldinger fra java-fagmøte:
 (V) Å -Reflected/stored "speil/skuff" generell bildebruk - bilder som forteller noe
 (V) Å - Hvem bruker CSP - bankId 2.0.
 ( ) XSS - stored reflected client server forklare bedre
-( ) figur XSS stored/reflected client/server matrise
+(V) figur XSS stored/reflected client/server matrise
 (V) Å - Prevent XSS - escaping,validering, osv. eksempler bilder
 (V) Å - CSP to the rescue - bort med brødtekst
 ( ) Å - vise csp header
