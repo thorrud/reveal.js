@@ -1,4 +1,4 @@
-﻿1. Introduksjon
+1. Introduksjon
 	Navn, hei, osv. 
 	- Slide med foredragsnavn
 
@@ -70,7 +70,7 @@ Tilbakemeldinger fra java-fagmøte:
 
 ( ) M - Oppsett av CSP - hvordan konfigurere klart
 ( ) Mer reporting - Reporting only
-( ) Pretty format på reporting kode
+(V) Å - Pretty format på reporting kode
 (V) M - Hvilke browsere er støttet - screenshot av nettside
 ( ) XSS-breadcrumb
 (V) M - XSS-eksempler fra virkeligheten
