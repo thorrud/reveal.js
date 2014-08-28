@@ -85,8 +85,8 @@ Tilbakemeldinger fra java-fagmøte:
 (V) Å - XSS - mindre tekst, 
 ( ) M - XSS - freshe opp figurer, mindre piler, mer pedagogisk. Fjerne noen slides
 ( ) XSS - ikke document.cookie
-(V) Reflected/stored "speil/skuff" generell bildebruk - bilder som forteller noe
-(V) Hvem bruker CSP - bankId 2.0.
+(V) Å -Reflected/stored "speil/skuff" generell bildebruk - bilder som forteller noe
+(V) Å - Hvem bruker CSP - bankId 2.0.
 ( ) XSS - stored reflected client server forklare bedre
 ( ) figur XSS stored/reflected client/server matrise
 (V) Å - Prevent XSS - escaping,validering, osv. eksempler bilder
