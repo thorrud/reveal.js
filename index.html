@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -65,6 +65,7 @@
 				<section>
 					<section>
 						<h2>Cross-Site Scripting (XSS)</h2>
+						<img src="img/Am_I_Vulnerable_To_XSS.png">
 					</section>
 
 					<section data-background="img/owasp.png" data-background-size="1200px">
@@ -129,10 +130,16 @@
 
 					<section>
 						<h2>Stored vs Reflected</h2>
+						<img src="img/skuff2.jpeg"> <img src="img/speil.jpeg">
 					</section>
 					
 					<section>
 						<h2>Server vs Client side</h2>
+						<img src="img/hacker.jpeg">
+					</section>
+
+					<section>
+						<img src="img/Server-XSS_vs_Client-XSS_Chart.jpg">
 					</section>
 					
 					<section>
@@ -241,23 +248,42 @@
 					<h2>Demo</h2>
 				</section>
 
-				<section id="fragments">
-					<h2>How Do I Prevent XSS?</h2>
-					<p>
-						<ol>
-							<li class="fragment">Escape all untrusted data</li>
-							<li class="fragment">Input validation</li>
-							<li class="fragment">Auto-sanitization libraries</li>
-							<li class="fragment">Content Security Policy (CSP)</li>
-						</ol>
-					</p>
+				<section>
+					<section>
+						<h2>How Do I Prevent XSS?</h2>
+					</section>
+					<section>
+						Escape all untrusted data
+						<pre><code data-trim contenteditable>
+<script>...NEVER PUT UNTRUSTED DATA HERE...</script>         
+<!--...NEVER PUT UNTRUSTED DATA HERE...-->
+<style>...NEVER PUT UNTRUSTED DATA HERE...</style></code></pre>
 
-					<p class="fragment">
-						<small>
-							* https://www.owasp.org/index.php/Top_10_2013-A3-Cross-Site_Scripting_(XSS)
-						</small>
-					</p>
+	<pre><code>
+ <div>...ESCAPE UNTRUSTED DATA BEFORE PUTTING HERE...</div>         
+ 
+ any other normal HTML elements
+	 					</code></pre>
 
+						<img src="img/escaping.png" >
+					</section>
+					<section>
+						Input validation
+						<img src="img/input_validation.png">
+					</section>	
+					<section>	
+						<p>
+							Auto-sanitization libraries
+							<ul>
+								<li>OWASP AntiSamy</li>
+								<li>OWASP HTML Sanitizer</li>
+							</ul>
+						</p>
+					</section>
+					<section>
+						Content Security Policy (CSP)
+						<img src="img/chrome_patch-680x400.jpg">
+					</section>					
 				</section>
 
 				<section>
@@ -273,31 +299,20 @@
 						<h2>CSP to the rescue</h2>
 					</section>
 					<section>
-						<h4>What is it?</h4>
-						
-							<p>An added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks.</p>
-							
-						
+						<h4>What is it?</h4>		
 					</section>
 					<section>
-						<h4>What does it do</h4>
-						
-							<p>Declare a set of content restrictions for a web resource</p>
-							
+						<h4>What does it do?</h4>
 					</section>
 					<section>
 						<h4>How does it solve my problems?</h4>
-						
-							<p>With this policy defined, the browser will simply throw an error instead of loading script from any other source</p>
-						
 					</section>
 					<section>
 						<h4>CSP policy directives</h4>
-						
-							<p>Defines where the web server should load resources from</p>
 							<pre><code data-trim contenteditable>
-Content-Security-Policy: default-src 'self' trustedscripts.foo.com; 				</code></pre>
-						
+Content-Security-Policy: default-src 'self' trustedscripts.foo.com;
+							</code></pre>	
+							<img src="img/csp2.jpeg">
 					</section>
 					<section>
 					
@@ -306,24 +321,25 @@ Content-Security-Policy: default-src 'self' trustedscripts.foo.com; 				</code><
 					</section>
 					<section>
 						<h4>Whitelists</h4>
-						<p> What resources can be loaded from which domains</p>
-						
-					</section>
 
+					</section>
 				</section>
+
 				<section>
 					<h2>Reporting</h2>
-					<small>
-					<code>csp-report: {document-uri:http://csp-demo.herokuapp.com/, referrer:, violated-directive:script-src 'self',...}<br/>
-					blocked-uri: ""<br/>
-column-number: 2536<br/>
-document-uri: "http://csp-demo.herokuapp.com/"<br/>
-line-number: 2<br/>
-original-policy: "default-src 'self'; script-src 'self'; img-src 'self' *.facebook.com *.akamaihd.net; style-src *; frame-src 'self'; report-uri /_/csp-reports;script-nonce <br/>7fcd2784d3c60010c90490e36440c58be3611bb5"<br/>
-referrer: ""<br/>
-source-file: "http://csp-demo.herokuapp.com/Assets/Scripts/jQuery/jquery-2.1.1.min.js"<br/>
-status-code: 200<br/>
-violated-directive: "script-src 'self'"</code></small>
+					
+					<pre><code>
+csp-report:
+ blocked-uri: ""
+ column-number: 2536
+ document-uri: "http://csp-demo.herokuapp.com/"
+ line-number: 2
+ original-policy: "default-src 'self'; script-src 'self'; img-src 'self' *.facebook.com *.akamaihd.net; style-src *; frame-src 'self'; report-uri /_/csp-reports;script-nonce 7fcd2784d3c60010c90490e36440c58be3611bb5"                    
+ referrer: ""
+ source-file: "http://csp-demo.herokuapp.com/Assets/Scripts/jQuery/jquery-2.1.1.min.js"
+ status-code: 200
+ violated-directive: "script-src 'self'"
+					</code></pre>
 				</section>
 
 				<section>
@@ -430,6 +446,11 @@ cspPolicies.add("report-uri /_/csp-reports");
 
 				<section>
 					<h2>Demo - CSP</h2>
+				</section>
+
+				<section>
+					<h2>Who uses CSP?</h2>
+					<img src="img/bankid2.0.jpeg">
 				</section>
 
 				

@@ -1,4 +1,4 @@
-﻿1. Introduksjon
+1. Introduksjon
 	Navn, hei, osv. 
 	- Slide med foredragsnavn
 
@@ -70,7 +70,7 @@ Tilbakemeldinger fra java-fagmøte:
 
 ( ) M - Oppsett av CSP - hvordan konfigurere klart
 ( ) Mer reporting - Reporting only
-( ) Pretty format på reporting kode
+(V) Å - Pretty format på reporting kode
 (V) M - Hvilke browsere er støttet - screenshot av nettside
 ( ) XSS-breadcrumb
 (V) M - XSS-eksempler fra virkeligheten
@@ -85,12 +85,12 @@ Tilbakemeldinger fra java-fagmøte:
 (V) Å - XSS - mindre tekst, 
 ( ) M - XSS - freshe opp figurer, mindre piler, mer pedagogisk. Fjerne noen slides
 ( ) XSS - ikke document.cookie
-( ) Reflected/stored "speil/skuff" generell bildebruk - bilder som forteller noe
-( ) Hvem bruker CSP - bankId 2.0.
+(V) Å -Reflected/stored "speil/skuff" generell bildebruk - bilder som forteller noe
+(V) Å - Hvem bruker CSP - bankId 2.0.
 ( ) XSS - stored reflected client server forklare bedre
-( ) figur XSS stored/reflected client/server matrise
-( ) Å - Prevent XSS - escaping,validering, osv. eksempler bilder
-( ) Å - CSP to the rescue - bort med brødtekst
+(V) figur XSS stored/reflected client/server matrise
+(V) Å - Prevent XSS - escaping,validering, osv. eksempler bilder
+(V) Å - CSP to the rescue - bort med brødtekst
 ( ) Å - vise csp header
 
 (V) Å - More csp før csp demo (omdøpe til noe annet enn more csp)
@@ -105,6 +105,6 @@ Tilbakemeldinger fra java-fagmøte:
 ( ) M - "Det er et veldig godt eksempel" - something something CSP - figur med CSP protection (fra XSS slides)
 ( ) M - Bilde med mindre hår
 ( ) About us - twitter, instagram, snapchat, QR-kode
-( ) Finn en bakgrunn
+(V) Finn en bakgrunn
 
 
