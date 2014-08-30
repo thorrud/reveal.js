@@ -91,7 +91,7 @@ Tilbakemeldinger fra java-fagmøte:
 (V) figur XSS stored/reflected client/server matrise
 (V) Å - Prevent XSS - escaping,validering, osv. eksempler bilder
 (V) Å - CSP to the rescue - bort med brødtekst
-( ) Å - vise csp header
+(V) Å - vise csp header
 
 (V) Å - More csp før csp demo (omdøpe til noe annet enn more csp)
 (V) Å - Hybrid - vise csp kode i presentasjon og i intellij

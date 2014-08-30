@@ -316,7 +316,20 @@ Content-Security-Policy: default-src 'self' trustedscripts.foo.com;
 					</section>
 					<section>
 					
-						<p>CSP is sent with the header to the client</p>
+						<pre><code data-trim contenteditable>
+Response Headers
+ Accept-Ranges:bytes
+ Connection:keep-alive
+ Content-Length:1858
+ Content-Security-Policy:default-src 'self'; script-src 'self'; img-src 'self' *.theanimalfiles.com *.akamaihd.net *.facebook.com; style-src *; frame-src 'self'; report-uri /_/csp-reports;script-nonce 0fbea756e6846ec42ef8e693a294c7f13dcb323a
+ Content-Type:text/html
+ Date:Sat, 30 Aug 2014 08:46:32 GMT
+ Last-Modified:Sat, 30 Aug 2014 08:45:14 GMT
+ Server:Jetty(7.x.y-SNAPSHOT)
+ Via:1.1 vegur
+ X-Content-Security-Policy:default-src 'self'; script-src 'self'; img-src 'self' *.theanimalfiles.com *.akamaihd.net *.facebook.com; style-src *; frame-src 'self'; report-uri /_/csp-reports;script-nonce 0fbea756e6846ec42ef8e693a294c7f13dcb323a
+ X-Webkit-Csp:default-src 'self'; script-src 'self'; img-src 'self' *.theanimalfiles.com *.akamaihd.net *.facebook.com; style-src *; frame-src 'self'; report-uri /_/csp-reports;script-nonce 0fbea756e6846ec42ef8e693a294c7f13dcb323a
+						</code></pre>
 						
 					</section>
 					<section>
