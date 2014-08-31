@@ -1,4 +1,4 @@
-1. Introduksjon
+﻿1. Introduksjon
 	Navn, hei, osv. 
 	- Slide med foredragsnavn
 
@@ -68,8 +68,8 @@ MN: Fargevalg bakgrunn pr seksjon
 
 Tilbakemeldinger fra java-fagmøte:
 
-( ) M - Oppsett av CSP - hvordan konfigurere klart
-( ) Mer reporting - Reporting only
+(\) M - Oppsett av CSP - hvordan konfigurere klart
+(V) Mer reporting - Reporting only
 (V) Å - Pretty format på reporting kode
 (V) M - Hvilke browsere er støttet - screenshot av nettside
 ( ) XSS-breadcrumb
@@ -77,17 +77,17 @@ Tilbakemeldinger fra java-fagmøte:
 (V) M - XSS - kostnader fra virkeligheten
 
 
-( ) M - Agenda - endre overskrifter
+(V) M - Agenda - endre overskrifter
 (V) Owasp - forklare hva owasp er
 (V) Owasp logoen
 (V) CSP - Content Security Policy - nevne / vise forkortelsen 
-( ) Mer figurer
+(V) Mer figurer
 (V) Å - XSS - mindre tekst, 
-( ) M - XSS - freshe opp figurer, mindre piler, mer pedagogisk. Fjerne noen slides
-( ) XSS - ikke document.cookie
+(V) M - XSS - freshe opp figurer, mindre piler, mer pedagogisk. Fjerne noen slides
+(V) XSS - ikke document.cookie
 (V) Å -Reflected/stored "speil/skuff" generell bildebruk - bilder som forteller noe
 (V) Å - Hvem bruker CSP - bankId 2.0.
-( ) XSS - stored reflected client server forklare bedre
+(V) XSS - stored reflected client server forklare bedre
 (V) figur XSS stored/reflected client/server matrise
 (V) Å - Prevent XSS - escaping,validering, osv. eksempler bilder
 (V) Å - CSP to the rescue - bort med brødtekst
@@ -95,7 +95,7 @@ Tilbakemeldinger fra java-fagmøte:
 
 (V) Å - More csp før csp demo (omdøpe til noe annet enn more csp)
 (V) Å - Hybrid - vise csp kode i presentasjon og i intellij
-( ) M - Annet theme enn darcula
+(V) M - Annet theme enn darcula
 (V) fremheve csp kode i presentasjon
 
 ( ) Mer XSS på demo
