@@ -176,10 +176,7 @@
 					</section>
 					<section>
 						Escape all untrusted data
-						<pre><code data-trim contenteditable>
-<script>...NEVER PUT UNTRUSTED DATA HERE...</script>         
-<!--...NEVER PUT UNTRUSTED DATA HERE...-->
-<style>...NEVER PUT UNTRUSTED DATA HERE...</style></code></pre>
+						
 
 	<pre><code>
  <div>...ESCAPE UNTRUSTED DATA BEFORE PUTTING HERE...</div>         
@@ -193,6 +190,9 @@
   ' --> &amp;#x27;
   / --> &amp;#x2F;
 	 					</code></pre>
+	 					<pre><code data-trim contenteditable> 
+ <div attr="...ESCAPE UNTRUSTED DATA BEFORE PUTTING HERE...">content</div>  </code></pre>
+ Except for alphanumeric characters, escape all characters with ASCII values less than 256 with the &#xHH; format
 					</section>
 					<section>
 						Input validation
