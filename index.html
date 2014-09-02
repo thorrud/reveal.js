@@ -192,7 +192,12 @@
 	 					</code></pre>
 	 					<pre><code data-trim contenteditable> 
  <div attr="...ESCAPE UNTRUSTED DATA BEFORE PUTTING HERE...">content</div>  </code></pre>
- Except for alphanumeric characters, escape all characters with ASCII values less than 256 with the &#xHH; format
+ <pre><code data-trim contenteditable> 
+  <script>x='...ESCAPE UNTRUSTED DATA BEFORE PUTTING HERE...'</script>  </code></pre>
+   <pre><code data-trim contenteditable> 
+  <style>selector { property : ...ESCAPE UNTRUSTED DATA BEFORE PUTTING HERE...; } </style> </code></pre>
+  <pre><code data-trim contenteditable> 
+   <a href="http://www.somesite.com?test=...ESCAPE UNTRUSTED DATA BEFORE PUTTING HERE...">link</a > </code></pre>
 					</section>
 					<section>
 						Input validation
