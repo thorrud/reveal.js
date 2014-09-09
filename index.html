@@ -83,7 +83,7 @@
 						</ol>
 						<p><a href=http://owasp.com/index.php/Category:OWASP_Top_Ten_Project>(http://owasp.com)</a></p>
 						
-					</a>
+
 					</section>
 
                     <section>
@@ -105,7 +105,8 @@
                         <img src="img/Top10AppVulnerabilities.png" />
                         <p>Source: 2013 TRUSTWAVE GLOBAL SECURITY REPORT</p>
                     </section>
-
+                </section>
+                <section>
                     <section>
                         <h2>Real life examples</h2>
                     </section>
@@ -127,7 +128,8 @@
                     <section>
                         <img src="img/examples/AppleStore.png" />
                     </section>
-
+                </section>
+                <section>
 					<section>
 						<h2>Stored vs Reflected</h2>
 						<img src="img/skuff2.jpeg"> <img src="img/speil.jpeg">
@@ -289,14 +291,40 @@ csp-report:
 					</code></pre>
 				</section>
 
-				<section>
-					<section>
-						<h3>CSP - deeper into the matter</h3>
-					</section>
-					
-					<section>
-						<h4>Wide variety of sources</h4>
-						<ul>
+                <section>
+                    <h3>CSP - Implementation</h3>
+						<pre><code data-trim contenteditable>
+// Define list of CSP HTTP Headers
+this.cspHeaders.add("Content-Security-Policy");
+this.cspHeaders.add("X-Content-Security-Policy");
+this.cspHeaders.add("X-WebKit-CSP");
+
+                        </code></pre>
+
+<pre><code data-trim contenteditable>
+// Define CSP policies
+cspPolicies.add("default-src 'self'");
+cspPolicies.add("script-src 'self'");
+cspPolicies.add("img-src 'self' *.theanimalfiles.com *.akamaihd.net");
+cspPolicies.add("style-src *");
+cspPolicies.add("frame-src 'self'");
+cspPolicies.add("report-uri /_/csp-reports");
+</code></pre>
+                </section>
+                <section>
+                    <section>
+                        <h3>CSP - deeper into the matter</h3>
+                    </section>
+                    <section>
+
+                        <p>
+                            CSP bans inline scripting, eval(), new Function(), setTimeout([string], ...), and setInterval([string], ...)
+                        </p>
+                    </section>
+
+                    <section>
+                        <h4>Wide variety of sources</h4>
+                        <ul>
 							<li><b>connect-src</b></li>
 							<li><b>font-src</b></li>
 							<li><b>frame-src</b></li>
@@ -305,29 +333,23 @@ csp-report:
 							<li><b>object-src</b></li>
 							<li><b>style-src</b></li>
 						</ul>
-					</section>
-					<section>
-						<p>Four keywords are also accepted in the source list:</p>
-						<ul>
+                    </section>
+                    <section>
+                        <p>Four keywords are also accepted in the source list:</p>
+                        <ul>
 							<li><b>'none'</b></li>
 							<li><b>'self'</b></li>
 							<li><b>'unsafe-inline'</b></li>
 							<li><b>'unsafe-eval'</b></li>
 						</ul>
-					</section>
-					<section>
-						
-						<p>
+                    </section>
+                    <section>
+
+                        <p>
 							<b>sandbox</b>
 						</p>
-					</section>
-					<section>
-					
-						<p>
-							CSP bans inline scripting, eval(), new Function(), setTimeout([string], ...), and setInterval([string], ...)
-						</p>
-					</section>
-					<section>
+                    </section>
+                    <section>
 						For example, you might rewrite the following from:
 						<pre><code data-trim contenteditable>
 <script>
@@ -338,7 +360,7 @@ csp-report:
 <button onclick='doAmazingThings();'>Am I amazing?</button>
 						</code></pre>
 
-						to something more like:
+                        to something more like:
 
 						<pre><code data-trim contenteditable>
 							<!-- amazing.html -->
@@ -355,35 +377,12 @@ document.addEventListener('DOMContentReady', function () {
   document.getElementById('amazing')
           .addEventListener('click', doAmazingThings);
 });
-						</code></pre>						
-					</section>
+						</code></pre>
+                    </section>
 
 
-				</section>
+                </section>
 
-				<section>
-				<h3>CSP - Implementation</h3>
-						<pre><code data-trim contenteditable>
-// Define list of CSP HTTP Headers
-this.cspHeaders.add("Content-Security-Policy");
-this.cspHeaders.add("X-Content-Security-Policy");
-this.cspHeaders.add("X-WebKit-CSP");
-
-</code></pre>
-
-<pre><code data-trim contenteditable>
-// Define CSP policies
-cspPolicies.add("default-src 'self'");
-cspPolicies.add("script-src 'self'");
-cspPolicies.add("img-src 'self' *.theanimalfiles.com *.akamaihd.net");
-cspPolicies.add("style-src *");
-cspPolicies.add("frame-src 'self'");
-cspPolicies.add("report-uri /_/csp-reports");
-</code></pre>
-
-
-						
-				</section>	
 
 				<section>
 					<h2>Demo - CSP</h2>
@@ -413,18 +412,35 @@ cspPolicies.add("report-uri /_/csp-reports");
                 </section>
 				<section>
 					<h2>Who uses CSP?</h2>
-					<img src="img/bankid2.0.jpeg">
+				<!--	<img src="img/bankid2.0.jpeg"> -->
 				</section>
 
 				
 
 				<section>
-					<h2>Status</h2>
-					<ul>
-					<li>CSP was originally developed by the Mozilla Foundation and was first implemented in Firefox 4</li>
-					<li>As of 2012 the CSP 1.0 is a W3C candidate</li>
-					<li>Content Security Policy 1.1’s Editors’ Draft is under active development.</li>
-					</ul>
+                    <section>
+                        <h2>Status</h2>
+                        <ul>
+                        <li>Developed by the Mozilla Foundation</li>
+                        <li>W3C candidate</li>
+                        <li>Content Security Policy 1.1</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>HTML &lt;meta&gt; element</h2>
+                        <pre><code><meta http-equiv="Content-Security-Policy" content="script-src 'self'"></code></pre>
+                    </section>
+                    <section>
+                        <h2>Reflected-XSS</h2>
+                        <pre><code>directive-name    = "reflected-xss"
+directive-value   = "allow" / "block" / "filter"</code></pre>
+                    </section>
+                    <section>
+                        <h2>Nonce & Hash</h2>
+                        <pre><code>Content-Security-Policy: default-src 'self';
+script-src 'self' https://example.com 'nonce-Nc3n83cnSAd3wc3Sasdfn939hc3'</code></pre>
+                        <pre><code>Content-Security-Policy: script-src 'sha256-YWIzOWNiNzJjNDRlYzc4MTgwMDhmZDlkOWI0NTAyMjgyY2MyMWJlMWUyNjc1ODJlYWJhNjU5MGU4NmZmNGU3OAo='</code></pre>
+                    </section>
 				</section>
 
                 <section>

@@ -107,4 +107,6 @@ Tilbakemeldinger fra java-fagmøte:
 ( ) About us - twitter, instagram, snapchat, QR-kode
 (V) Finn en bakgrunn
 
+( ) Utvide med noen slides med 1.1 funksjonalitet (meta tag, x-xss-protection, hash/nonce-encoding of scripts) http://www.w3.org/TR/CSP11/#sec-directives
+
 
